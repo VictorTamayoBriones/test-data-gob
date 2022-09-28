@@ -1,12 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import AllApiResults, { data } from "./states/AllApiResults";
+import { resultsModel } from "../models/resultModel";
+import AllApiResults from "./states/AllApiResults";
 
 export interface AppStore{
-    allApiResults: data
+    allApiResults: resultsModel[][][]
 }
 
 export const store = configureStore({
     reducer:{
-        allAPiResults: AllApiResults
+        allApiResults: AllApiResults
     }
 });

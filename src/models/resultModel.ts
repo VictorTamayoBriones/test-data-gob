@@ -1,5 +1,5 @@
 export interface resultsModel{
-    id: string,
+    _id: string,
     cityid: string,
     validdateutc: string,
     winddirectioncardinal: string,

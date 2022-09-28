@@ -38,6 +38,11 @@ table{
       td{
         padding: 10px 0;
       }
+      cursor: pointer;
+      &:hover{
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+      }
     }
   }
 }

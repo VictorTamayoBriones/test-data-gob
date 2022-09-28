@@ -5,14 +5,14 @@ import { AppStore } from "../../../../redux/store"
 
 function TBody() {
 
-    const { currentTenResults } = useContext(TableContext)
-    
+    const { currentTenResults, handleById } = useContext(TableContext)
+
     return (
         <tbody>
             {
                 currentTenResults.map(result =>{
                    return(
-                    <tr key={result._id} >
+                    <tr key={result._id} onClick={()=>handleById(result._id)}  >
                         <td>{result._id}</td>
                         <td>{result.cityid}</td>
                         <td>{result.name}</td>

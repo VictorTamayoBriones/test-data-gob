@@ -22,8 +22,12 @@ export const TableProvider = ({children}:Props) =>{
         setCurrentTenResults(reduxResults[num])
     }
 
+    const handleById = (id: string) =>{
+        setCurrentTenResults(currentTenResults.filter(res => res._id === id))        
+    }
+
     return(
-        <TableContext.Provider value={{currentTenResults, handlePagination}} >
+        <TableContext.Provider value={{currentTenResults, handlePagination, handleById}} >
             {children}
         </TableContext.Provider>
     )

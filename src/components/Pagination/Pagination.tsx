@@ -11,7 +11,7 @@ function Pagination() {
   return (
     <div className="navigation" >
       {results.map((result, i)=>(
-          <p onClick={()=>handlePagination(i)} >{i+1}</p>
+          <p key={`num-pag-${i+1}`} onClick={()=>handlePagination(i)} >{i+1}</p>
       ))}
     </div>
   )
